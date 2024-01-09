@@ -74,3 +74,28 @@ nav a {
     height: 40vh;
 }
 
+.contact{
+    position: relative;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+fieldset{
+    padding: 2em;
+    width: 40%;
+    background-color: #f7f7f7;
+    border: .5px solid #b4b4b4;
+    border-radius: 5px;
+    text-align:left;
+}
+
+fieldset form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin-bottom: 1em;
+    padding: .5em;
+    border-radius: 5px;
+    border: .2px solid grey;
+}

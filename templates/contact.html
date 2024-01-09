@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="" alt="Logo">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="/templates/aboutUs.html">Acerca de</a></li>
+                    <li><a href="/templates/contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="contact">
+            <div class="img">
+                <img src="/assets/mountains.jpg" alt="Imagen montañas">
+            </div>
+            <div class="overlay">
+                <fieldset>
+                <form action="submitForm.html" method="get">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" required>
+                    <label for="last-name">Apellidos</label>
+                    <input type="text" id="last-name" required>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" required>
+                    <label for="number">Número teléfono</label>
+                    <input id="phone" type="tel" name="phone"/>
+                </form>
+                </fieldset>
+            </div>
+    </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+          utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+      </script>
+</body>
+</html>
