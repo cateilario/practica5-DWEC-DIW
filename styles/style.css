@@ -46,7 +46,8 @@ nav a {
 
 .container{
     position: relative;
-    clip-path: ellipse(95% 70% at 45% 0%);
+    /*clip-path: ellipse(95% 70% at 45% 0%);*/
+    clip-path: polygon(0 0, 100% 0%, 100% 66%, 0 59%);
 }
 
 .img img{
@@ -69,7 +70,7 @@ nav a {
 }
 
 .container2{
-    clip-path: ellipse(90% 65% at 65% 70%);
+    clip-path: polygon(0 35%, 100% 30%, 100% 100%, 0 100%);
     background-color: #939191;
     height: 40vh;
 }
