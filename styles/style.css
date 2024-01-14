@@ -25,24 +25,22 @@
     --span-color: white;
 } */
 
-nav{
+header{
     background-color: #ffffff;
-    height: 12vh;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    height: 15vh;
 }
 
 .logo{
-    margin: -2.5em 0 0 3em;
+    width: 11rem;
 }
 
-.menu ul{
+.nav-list{
     list-style: none;
     font-size: 1rem;
     display:flex;
-    justify-content:center;
-    align-items: center;
-    height: 12vh;
  }
 
 .menu li{
@@ -51,7 +49,7 @@ nav{
     font-weight: bold;
 }
 
-.menu a {
+.menu li a {
     padding: 1em;
     color: #2b2a2a;
     background-color: none;
@@ -59,12 +57,62 @@ nav{
     border-radius: 5px;
 }
 
-.menu a:hover{
+/* .menu a:hover{
     box-shadow: inset 0 0 8px 2px grey;
     background-color: #ffffff;
+} */
+
+.open-menu, 
+.close-menu{
+    display:none;
 }
 
+/* Estilos para pantallas menores a 400px */
+@media screen and (max-width: 550px) {
+    .open-menu,
+    .close-menu {
+      display: block;
+      border: 0;
+      font-size: 1.5rem;
+      background-color: transparent;
+      cursor:pointer;
+    }
 
+    .close-menu{
+        color: white;
+    }
+
+    .menu{
+        opacity: 0;
+        visibility: hidden;
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #2b2a2a;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.568);
+        z-index: 1;
+    }
+
+    .menu.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .menu ul li a{
+        color: white;
+    }
+
+}
 
 .hero-container{
     background: url(/assets/fondo.jpg) center/cover;
