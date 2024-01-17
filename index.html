@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <header>
+    <header class="nav-bar">
         <img src="/assets/logo.png" alt="Logo" class="logo">
         <button class="open-menu" id="open-nav"><i class="bi bi-list"></i></button>
-        <nav class="menu" id="nav">
+        <nav class="nav" id="nav">
             <button id="close-nav" class="close-menu"><i class="bi bi-x"></i></button>
             <ul class="nav-list">
                 <li><a href="/index.html">Inicio</a></li>
@@ -26,7 +26,7 @@
             <div class="hero-body">
                 <img src="" alt="">
                 <h1>Descubre la <span>"Città eterna"</span></h1>
-                <p></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos reprehenderit expedita adipisci quaerat amet vero obcaecati? Laudantium a, adipisci exercitationem minima itaque voluptas sed quam iure odit, eius repellat sit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolorum</p>
             </div>
         </section>
 
@@ -46,15 +46,15 @@
     <script>
         const nav = document.getElementById('nav');
         const openBtn = document.getElementById('open-nav');
-        const closeBtn = document.getElementById('close-nav');
-
-        openBtn.addEventListener('click', () =>{
+        const closeBtn = document.getElementById('close-nav');    
+        
+        const toggleMenu = () => {
             nav.classList.toggle("visible");
-        });
+        }
 
-        closeBtn.addEventListener('click', () =>{
-            nav.classList.remove("visible");
-        })
+        openBtn.addEventListener('click', toggleMenu);
+
+        closeBtn.addEventListener('click', toggleMenu);
     </script>
 </body>
 </html>
