@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
@@ -15,8 +17,8 @@
             <button id="close-nav" class="close-menu"><i class="bi bi-x"></i></button>
             <ul class="nav-list">
                 <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/templates/aboutUs.html">Acerca de</a></li>
-                <li><a href="/templates/contact.html">Contacto</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -24,18 +26,47 @@
     <main>
         <section class="hero-container">
             <div class="hero-body">
-                <img src="" alt="">
+                
                 <h1>Descubre la <span>"Città eterna"</span></h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos reprehenderit expedita adipisci quaerat amet vero obcaecati? Laudantium a, adipisci exercitationem minima itaque voluptas sed quam iure odit, eius repellat sit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolorum</p>
             </div>
         </section>
 
-        <section>
-            <h1>Jdijsodif</h1>
+        <section class="hero-container2" id="services">
+            <div class="cards-container">
+                <h1>Nuestros servicios</h1>
+                <article class="card">
+                    <div class="card-title">Una tarjeta básica</div>
+                    <div class="card-body">
+                    <img src="" alt="muestra">
+                        lorem ipsum
+                    </div>
+                    <div class="card-footer">
+                       <a href="#">Más información</a>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section class="container2">
-            <p>josidjfoaisjdfoajdfosjid</p>
+        <section class="contact" id="contact">
+            <fieldset>
+                <form action="submitForm.html" method="get">
+                    <label for="name"></label>
+                    <input type="text" id="name" placeholder="Nombre">
+                    <label for="last-name"></label>
+                    <input type="text" id="last-name" placeholder="Apellidos">
+                    <label for="email"></label>
+                    <input type="email" id="email" placeholder="Correo electrónico">
+                    <label for="number"></label>
+                    <input id="phone" type="tel" name="phone" placeholder="Teléfono"/>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <label for="">
+                        <input type="checkbox">
+                    Acepto política de privacidad y protección de datos</label>
+                    <button type="submit" id="submit-btn">Enviar</button>
+                </form>
+            </fieldset>
+                
         </section>
     </main>
 
@@ -44,17 +75,12 @@
     </footer>
 
     <script>
-        const nav = document.getElementById('nav');
-        const openBtn = document.getElementById('open-nav');
-        const closeBtn = document.getElementById('close-nav');    
-        
-        const toggleMenu = () => {
-            nav.classList.toggle("visible");
-        }
-
-        openBtn.addEventListener('click', toggleMenu);
-
-        closeBtn.addEventListener('click', toggleMenu);
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+          utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
     </script>
+    <script src="/scripts/main.js"></script>
 </body>
 </html>
