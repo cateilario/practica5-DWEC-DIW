@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>PRACTICA 5</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
@@ -33,7 +33,7 @@
 
         <section class="services" id="services">
             <header>
-            <h1 class="title">Nuestros servicios</h1>
+            <h1 class="services-title">Nuestros servicios</h1>
             <h2>Elige tu experiencia y contáctanos para más información</h2>
             </header>
             <div class="cards-grid">
@@ -137,30 +137,47 @@
         </section>
 
         <section class="hero-container hero-2" id="contact">
+            <h1 class="contact-title">CONTACTO</h1>
             <div class="contact-section">
-                <h1 class="title">CONTACTO</h1>
+                <fieldset>
+                    <legend>Rellena el formulario con sus datos y su solicitud y nos pondremos en contacto contigo...</legend>
                 <form action="submitForm.html" method="get" id="contact-form">
-                    <label for="name"></label>
-                    <input type="text" id="name" placeholder="Nombre">
-                    <label for="last-name"></label>
-                    <input type="text" id="last-name" placeholder="Apellidos">
-                    <label for="email"></label>
-                    <input type="email" id="email" placeholder="Correo electrónico">
-                    <label for="number"></label>
-                    <input id="phone" type="tel" name="phone" placeholder="Teléfono">
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <label for="policy">
-                    <input type="checkbox" name="policy" id="policy"/> 
-                    Acepto política de privacidad y protección de datos</label>
-                    <button type="submit" id="submit-btn" class="contact-btn">Enviar</button>
+                        <label for="name" class="input-container">
+                            <i class="bi bi-person-fill icon"></i>
+                            <input type="text" id="name" placeholder="Nombre" class="input-field">
+                        </label>
+                        <label for="last-name" class="input-container">
+                            <i class="bi bi-person-fill icon"></i>
+                            <input type="text" id="last-name" placeholder="Apellidos" class="input-field">
+                        </label>
+                        <label for="email" class="input-container">
+                            <i class="bi bi-envelope-at-fill icon"></i>
+                            <input type="email" id="email" placeholder="Correo electrónico" class="input-field">
+                        </label>
+                        <label for="phone" class="input-container">
+                            <input id="phone" type="tel" name="phone" placeholder="Teléfono" class="input-field">
+                        </label>
+                        <label for="message" class="input-container">
+                            <i class="bi bi-chat-left-fill icon"></i>
+                            <textarea name="message" id="message" cols="5" rows="5" placeholder="Mensaje" class="input-field"></textarea>
+                        </label>
+                        <div class="checkbox">
+                            <input type="checkbox" name="policy" id="policy"/>
+                            <label for="" class="cb-lb">Acepto política de privacidad y protección de datos</label>
+                        </div>
+                        <button type="submit" id="submit-btn" class="contact-btn">Enviar</button>
                 </form>
+                </fieldset>
+                <div class="contact-info">
+                    <p>Si lo prefieres, tenemos otros medios de contacto:</p>
+                    <p><i class="bi bi-telephone-fill icon-contact"></i>985 88 88 88</p>
+                    <p><i class="bi bi-envelope-fill icon-contact"></i>caterinailario@hotmail.com</p>
+                    <p><i class="bi bi-geo-alt-fill icon-contact"></i>Calle Donoso Cortés, 3, Gijón</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-
-    </footer>
 
     <script>
         const phoneInputField = document.querySelector("#phone");
@@ -168,6 +185,7 @@
           utilsScript:
             "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
         });
+        
     </script>
     <script src="/scripts/main.js"></script>
 </body>

@@ -8,10 +8,15 @@
     src: url(/assets/fonts/NotoSerif_Condensed-MediumItalic.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'Raleway-Light';
+    src: url(/assets/fonts/Raleway-Light.ttf) format('truetype');
+}
+
 /*Restablecer estilos navegador*/
 *, 
-::after,
-::before{
+*:after,
+*:before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,6 +26,7 @@
 
 html{
     scroll-behavior: smooth;
+    /*scroll-snap-type: y mandatory; -> Cambia por secciones de la página*/
 }
 
 body{
@@ -44,7 +50,7 @@ p{
     --span-color: white;
 } */
 
-/*Estilos para header*/
+/*Header - Navbar*/
 
 .nav-bar{
     background-color: #ffffff;
@@ -82,7 +88,7 @@ p{
     display:none;
 }
 
-/*Estilos para primer section con hero image*/
+/*Hero Image section*/
 .hero-container{
     position: relative;
     height: 110vh;
@@ -96,6 +102,9 @@ p{
 .hero-2{
     clip-path: polygon(0 10%, 100% 12%, 100% 100%, 0 100%);
     background: url(/assets/fondo2.jpg) center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-container::before{
@@ -132,10 +141,11 @@ p{
 }
 
 .hero-body p{
-    font-size: .95rem;
+    font-family: Raleway-Light;
+    font-size: 1rem;
 }
 
-/*Estilos para segundo section con cards*/
+/*Cards section*/
 .services header{
     display: flex;
     flex-direction: column;
@@ -144,21 +154,21 @@ p{
     margin: 0  0 3rem 4rem;
 }
 
-.title{
+.services-title{
     text-transform: uppercase;
-    font-weight: 1000;
+    font-weight: 1100;
     font-size: 2.2rem;
     color: #2b2a2a;
 }
 
 .services header h2{
     font-size: 1.3rem;
-    font-weight: 200;
+    font-family: Raleway-Light;
     color: #747272;
 }
 
 .cards-grid{
-    width: 90%;
+    width: 85%;
     display:grid;
     margin: 0 auto;
     grid-template-columns: repeat(4,1fr);
@@ -173,6 +183,7 @@ p{
     transition: all .3s ease-in;
     position: relative;
     top:0;
+    min-height: 45vh;
 }
 
 .card .overlay{
@@ -232,40 +243,122 @@ p{
     font-size: 1.3rem;
 }
 
-/*Estilos para tercer section con formulario*/
+/*Contact section*/
 .contact-section{
     position: relative;
     display: flex;
-    flex-direction: column;
+    background-color: #272727d2;
     justify-content: center;
-    align-items: flex-start;
-    height: 100%;
+    padding: 1rem 2rem;
 }
 
-.contact-section .title{
-    color:#ffffff;
-    margin:7rem 0 2rem 4rem;
+.contact-title{
+    position:relative;
+    color: white;
+    margin: 8rem 0 2rem 5rem;
+    align-self: flex-start;
+    font-size: 2.2rem;
+    width: auto;
+}
+
+fieldset{
+    border: none;
+    margin-top: 1rem;
+}
+
+fieldset legend{
+    color:#daa94e;
+    font-size: .9rem;
+    width: 70%;
 }
 
 form{
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-self: center;
-    gap:.5rem;
+    align-items: flex-start;
+    width: auto;
+    gap: 1.5rem;
 }
 
 form input, textarea {
     padding:.6rem;
     width: 100%;
+    border:0;
+    background: transparent;
+    color:#ffffff;
+    resize: none;
+    font-family: Raleway-Light;
+    font-size: .9rem;
+}
+
+form input:focus,
+form textarea:focus{
+    outline:none;
+}
+
+.input-container{
+    width: 100%;
+    border-bottom: 1px solid white;
+}
+
+.input-container i{
+    position:absolute;
+}
+
+.icon{
+    color: white;
+    padding: .7rem;
+}
+
+.input-field{
+    width: 100%;
+    padding: .7rem;
+    margin-left: 2rem;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.cb-lb{
+    color:#ffffff;
+    font-size: .75rem;
+    font-family: Raleway-Light;
+    text-wrap:nowrap;
+    margin-left: 1rem;
 }
 
 .contact-btn{
-    border: 0;
+    border: none;
     background-color: #daa94e;
     width: 30%;
     margin:auto;
     padding: .5rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
 }
+
+.contact-info{
+    color:#daa94e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:1rem;
+    padding: 2rem;
+    font-size: .9rem;
+    border-left: 1px solid white;
+}
+
+
+.icon-contact{
+    font-size: 1.5em;
+    margin-right: 1rem;
+}
+
 
 @media screen and (max-width: 1024px) {
     .open-menu,
@@ -348,10 +441,16 @@ form input, textarea {
 
     .cards-grid{
         grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-        width: 70%;
+        width: 65%;
     }
 
-    
+    .card-body h2{
+        font-size: 1.1rem;
+    }
+
+    .card-body h3, .card-body p{
+        font-size: .8rem;
+    }
 
 }
 
