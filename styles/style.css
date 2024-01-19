@@ -83,13 +83,19 @@ p{
 }
 
 /*Estilos para primer section con hero image*/
-
 .hero-container{
-    background: url(/assets/fondo.jpg) center/cover;
     position: relative;
-    /*clip-path: ellipse(95% 70% at 45% 0%);*/
-    clip-path: polygon(0 0, 100% 0, 100% 77%, 0 83%);
-    height: 100vh;
+    height: 110vh;
+}
+
+.hero-1{
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 85%);
+    background: url(/assets/fondo.jpg) center/cover;
+}
+
+.hero-2{
+    clip-path: polygon(0 10%, 100% 12%, 100% 100%, 0 100%);
+    background: url(/assets/fondo2.jpg) center/cover;
 }
 
 .hero-container::before{
@@ -110,23 +116,45 @@ p{
     gap: 1rem;
     height: 100%;
     color:#ffffff;
-    width: 60%;
+    width: 70%;
     margin:auto;
     text-align: center;
+}
+
+.hero-body h1{
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
 }
 
 .hero-body span{
     font-family: Noto;
 }
 
+.hero-body p{
+    font-size: .95rem;
+}
+
 /*Estilos para segundo section con cards*/
-.services{
+.services header{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 3rem 1rem;
+    align-items: flex-start;
     gap:2rem;
+    margin: 0  0 3rem 4rem;
+}
+
+.title{
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 2.2rem;
+    color: #2b2a2a;
+}
+
+.services header h2{
+    font-size: 1.3rem;
+    font-weight: 200;
+    color: #747272;
 }
 
 .cards-grid{
@@ -136,6 +164,7 @@ p{
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,1fr);
     gap:3rem;
+    margin-bottom: 5rem;
 }
 
 .card{
@@ -182,7 +211,7 @@ p{
     width: 100%;
     display: block;
     border-radius: 8px 8px 0 0;
-    height: 25vh;
+    height: 50%;
 }
 
 .card-body{
@@ -194,7 +223,7 @@ p{
     gap: 1rem;
 }
 
-.card-body h3, p{
+.card-body h3, .card-body p{
     font-size: .9rem;
     color: #8a8787;
 }
@@ -204,29 +233,38 @@ p{
 }
 
 /*Estilos para tercer section con formulario*/
-.contact{
+.contact-section{
     position: relative;
-}
-
-fieldset{
-    padding: 2em;
-    width: 40%;
-    background-color: #f7f7f7;
-    border: .5px solid #b4b4b4;
-    border-radius: 5px;
-    text-align:left;
-}
-
-fieldset form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
 }
 
-form input {
-    margin-bottom: 1em;
-    padding: .5em;
-    border-radius: 5px;
-    border: .2px solid grey;
+.contact-section .title{
+    color:#ffffff;
+    margin:7rem 0 2rem 4rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap:.5rem;
+}
+
+form input, textarea {
+    padding:.6rem;
+    width: 100%;
+}
+
+.contact-btn{
+    border: 0;
+    background-color: #daa94e;
+    width: 30%;
+    margin:auto;
+    padding: .5rem 2rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -300,9 +338,20 @@ form input {
         transform-origin: bottom left;
     }
 
-    .cards-grid{
-        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    .services header h1{
+        font-size: 1.9rem;
     }
+    
+    .services header h2{
+        font-size: 1.1rem;
+    }
+
+    .cards-grid{
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        width: 70%;
+    }
+
+    
 
 }
 
