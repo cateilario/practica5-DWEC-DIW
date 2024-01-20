@@ -91,13 +91,14 @@ p{
 /*Hero Image section*/
 .hero-container{
     position: relative;
-    height: 110vh;
 }
 
 .hero-1{
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 85%);
     background: url(/assets/fondo.jpg) center/cover;
+    height: 100vh;
 }
+
 
 .hero-2{
     clip-path: polygon(0 10%, 100% 12%, 100% 100%, 0 100%);
@@ -105,6 +106,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 130vh;
 }
 
 .hero-container::before{
@@ -150,19 +152,19 @@ p{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap:2rem;
+    gap:1rem;
     margin: 0  0 3rem 4rem;
 }
 
 .services-title{
     text-transform: uppercase;
-    font-weight: 1100;
+    font-weight: 1300;
     font-size: 2.2rem;
     color: #2b2a2a;
 }
 
 .services header h2{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: Raleway-Light;
     color: #747272;
 }
@@ -170,11 +172,10 @@ p{
 .cards-grid{
     width: 85%;
     display:grid;
-    margin: 0 auto;
+    margin: auto;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(2, auto);
     gap:3rem;
-    margin-bottom: 5rem;
 }
 
 .card{
@@ -183,7 +184,7 @@ p{
     transition: all .3s ease-in;
     position: relative;
     top:0;
-    min-height: 45vh;
+    /* min-height: 45vh; */
 }
 
 .card .overlay{
@@ -218,6 +219,16 @@ p{
     top:-2px;
 }
 
+.card-body{
+    /* min-height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: .7rem;
+    padding: 1rem;
+}
+
 .card-img{
     width: 100%;
     display: block;
@@ -225,22 +236,13 @@ p{
     height: 50%;
 }
 
-.card-body{
-    min-height: 100%;
-    padding: 1rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
 .card-body h3, .card-body p{
-    font-size: .9rem;
+    font-size: .85rem;
     color: #8a8787;
 }
 
 .card-body h2{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 /*Contact section*/
@@ -353,12 +355,40 @@ form textarea:focus{
     border-left: 1px solid white;
 }
 
-
 .icon-contact{
     font-size: 1.5em;
     margin-right: 1rem;
 }
 
+/* Footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2.5rem;
+    padding:2rem 3rem 1rem 3rem;
+    background-color: #2b2a2a;
+    color:#ffffff;
+    font-size: .8rem;
+}
+
+.map{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.map-info p:first-child{
+    font-weight: 600;
+    font-size: .85rem;
+    margin-bottom: .5rem;
+}
+
+.social-media{
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
 
 @media screen and (max-width: 1024px) {
     .open-menu,
@@ -445,7 +475,7 @@ form textarea:focus{
     }
 
     .card-body h2{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .card-body h3, .card-body p{
