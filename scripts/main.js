@@ -1,13 +1,19 @@
 const nav = document.getElementById('nav');
 const openBtn = document.getElementById('open-nav');
-const closeBtn = document.getElementById('close-nav');    
+const closeBtn = document.getElementById('close-nav');  
+const navLinks = document.querySelectorAll('.nav-list a');  
         
 const toggleMenu = () => {
     nav.classList.toggle("visible");
 }
 
+navLinks.forEach(link => {
+    link.addEventListener('click', toggleMenu);
+});
+
 openBtn.addEventListener('click', toggleMenu);
 closeBtn.addEventListener('click', toggleMenu);
+// window.addEventListener('wheel', toggleMenu);
 
 document.addEventListener('DOMContentLoaded', function () {
     const cardContainers = document.querySelectorAll('.card-footer');

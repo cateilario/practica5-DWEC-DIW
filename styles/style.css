@@ -114,7 +114,7 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     height: 100%;
     color:#ffffff;
     width: 70%;
@@ -141,7 +141,7 @@ p{
 .services header{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap:1rem;
     margin: 0  0 3rem 4rem;
 }
@@ -214,7 +214,6 @@ p{
 }
 
 .card-body{
-    /* min-height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -433,7 +432,7 @@ footer{
         bottom:0;
         background-color: #272727;
         width: 60%;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.568);
+        box-shadow: 0 0 0 100vmax #000000a0;
         z-index: 1;
     }
 
