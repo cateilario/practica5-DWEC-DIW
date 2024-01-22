@@ -94,19 +94,9 @@ p{
 }
 
 .hero-1{
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 90%);
     background: url(/assets/fondo.jpg) center/cover;
     height: 100vh;
-}
-
-
-.hero-2{
-    clip-path: polygon(0 10%, 100% 12%, 100% 100%, 0 100%);
-    background: url(/assets/fondo2.jpg) center/cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 130vh;
 }
 
 .hero-container::before{
@@ -184,6 +174,10 @@ p{
     transition: all .3s ease-in;
     position: relative;
     top:0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: .5rem;
     /* min-height: 45vh; */
 }
 
@@ -223,17 +217,16 @@ p{
     /* min-height: 100%; */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: .7rem;
-    padding: 1rem;
+    gap: 1rem;
+    padding: .5rem;
 }
 
 .card-img{
     width: 100%;
     display: block;
     border-radius: 8px 8px 0 0;
-    height: 50%;
 }
 
 .card-body h3, .card-body p{
@@ -245,22 +238,44 @@ p{
     font-size: 1.2rem;
 }
 
+.card-footer{
+    padding: .5rem;
+}
+
+.star {
+    font-size: 24px;
+    color: #ccc;
+}
+
+.star.rated {
+    color: #f8d746; 
+}
+
 /*Contact section*/
-.contact-section{
-    position: relative;
+.hero-2{
+    clip-path: polygon(0 6%, 100% 8%, 100% 100%, 0 100%);
+    background: url(/assets/fondo2.jpg) center/cover;
     display: flex;
-    background-color: #272727d2;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: 1rem 2rem;
+    padding: 7rem 0 3rem 0;
+    gap: 2rem;
 }
 
 .contact-title{
     position:relative;
     color: white;
-    margin: 8rem 0 2rem 5rem;
-    align-self: flex-start;
     font-size: 2.2rem;
-    width: auto;
+    letter-spacing: 2px;
+}
+
+.contact-section{
+    position: relative;
+    display: flex;
+    background-color: #272727d2;
+    justify-content: center;
+    padding: 2rem;
 }
 
 fieldset{
@@ -361,7 +376,6 @@ form textarea:focus{
 }
 
 /* Footer */
-
 footer{
     display: flex;
     flex-direction: column;
@@ -471,7 +485,7 @@ footer{
 
     .cards-grid{
         grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-        width: 65%;
+        width: 75%;
     }
 
     .card-body h2{
@@ -480,6 +494,17 @@ footer{
 
     .card-body h3, .card-body p{
         font-size: .8rem;
+    }
+
+    .contact-section{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .contact-info{
+        border:none;
+        border-top: 1px solid white;
+        
     }
 
 }
