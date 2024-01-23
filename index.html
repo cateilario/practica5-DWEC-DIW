@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/modalStyle.css">
 </head>
 <body>
     <header class="nav-bar">
@@ -149,7 +150,7 @@
             <div class="contact-section">
                 <fieldset>
                     <legend>Rellena el formulario con tus datos y tu solicitud, y nos pondremos en contacto contigo...</legend>
-                    <form action="submitForm.html" method="get" id="contact-form">
+                    <form action="/templates/submitForm.html" method="get" id="contact-form">
                         <label for="name" class="input-container">
                             <i class="bi bi-person-fill icon"></i>
                             <input type="text" id="name" placeholder="Nombre" class="input-field">
@@ -171,11 +172,17 @@
                         </label>
                         <div class="checkbox">
                             <input type="checkbox" name="policy" id="policy"/>
-                            <label for="" class="cb-lb">Acepto política de privacidad y protección de datos</label>
+                            <label for="policy" class="cb-lb">Acepto política de privacidad y protección de datos</label>
                         </div>
                         <button type="submit" id="submit-btn" class="contact-btn">Enviar</button>
                     </form>
                 </fieldset>
+                <div id="modal-window" class="modal">
+                    <div class="modal-content">
+                        <button class="close" id="close-modal"><i class="bi bi-x modal-icon"></i></button>
+                        <ul id="errors"></ul>
+                    </div>
+                </div>
                 <div class="contact-info">
                     <p>Si lo prefieres, tenemos otros medios de contacto:</p>
                     <p><i class="bi bi-telephone-fill icon-contact"></i>985 88 88 88</p>
@@ -222,5 +229,6 @@
         
     </script>
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/validateForm.js"></script>
 </body>
 </html>
