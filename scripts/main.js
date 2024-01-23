@@ -11,6 +11,11 @@ const toggleMenu = () => {
     nav.classList.toggle("visible");
 };
 
+window.addEventListener('scroll', () =>{
+    const scrollPosition = window.scrollY;
+    if(scrollPosition > 0) nav.classList.remove("visible")
+});
+
 navLinks.forEach(link => {
     link.addEventListener('click', toggleMenu);
 });
