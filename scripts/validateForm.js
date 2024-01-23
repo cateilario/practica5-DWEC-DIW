@@ -28,7 +28,8 @@ export const validateForm = e => {
     // Correo electrónico válido
     !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email.value.trim()) && errorMessage.push('El correo eléctronico contiene caracteres inválidos');
     // Teléfono como campo obligatorio
-    phone.value.trim().length === 0 && errorMessage.push('El teléfono es un campo obligatorio')
+    phone.value.trim().length === 0 && errorMessage.push('El teléfono es un campo obligatorio');
+    if(phone.value) !/^[0-9]{8,15}$/.test(phone.value.trim()) && errorMessage.push('El teléfono introducido no es válido');
     // Mensaje como campo obligatorio
     message.value.trim().length < 5 && errorMessage.push('Introduzca un breve mensaje para procesar su consulta');
     // Checkbox obligatorio
