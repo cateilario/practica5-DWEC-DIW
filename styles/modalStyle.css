@@ -18,7 +18,7 @@
     border-radius: 5px;
     margin: 3rem auto;
     width: 40%;
-    padding: 2rem;
+    padding: 2.5rem;
     animation: showModal 0.5s linear;
 }
 
@@ -33,7 +33,7 @@
 .modal-content ul li::before{
     content: "x";
     margin-right: 5px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 @keyframes showModal {
@@ -46,7 +46,7 @@
   top:0;
   right:0;
   background-color: #eb7771;
-  padding: .4rem 1.2rem;
+  padding: .2rem .4rem;
   border: none;
   cursor: pointer;  
   border-top-right-radius: 5px;
@@ -71,6 +71,6 @@
     }
 
     .close {
-        padding: .1rem .8rem;
+        padding: .1rem .3rem;
     }
 }

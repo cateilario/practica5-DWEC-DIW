@@ -95,7 +95,7 @@ p{
 
 .hero-1{
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 90%);
-    background: url(/assets/fondo.jpg) center/cover;
+    background: url(/assets/imgs/fondo.jpg) center/cover;
     height: 100vh;
 }
 
@@ -253,12 +253,12 @@ p{
 /*Contact section*/
 .hero-2{
     clip-path: polygon(0 6%, 100% 8%, 100% 100%, 0 100%);
-    background: url(/assets/fondo2.jpg) center/cover;
+    background: url(/assets/imgs/fondo2.jpg) center/cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 7rem 0 3rem 0;
+    padding: 7.5rem 0 3rem 0;
     gap: 2rem;
 }
 
@@ -499,7 +499,7 @@ footer{
 
     .cards-grid{
         grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-        width: 75%;
+        width: 70%;
     }
 
     .card-body h2{
