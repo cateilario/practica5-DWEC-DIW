@@ -45,7 +45,6 @@ export const validateForm = e => {
             const list = document.createElement('li');
             list.textContent = message;
             errors.appendChild(list);
-            // errores.innerHTML += `<li>${mensaje}</li>`;
         });
 
         const closeModal = () =>{
@@ -53,14 +52,10 @@ export const validateForm = e => {
         };
 
         closeModalBtn.addEventListener("click", closeModal);
-        setTimeout(closeModal, 7000);
+        setTimeout(closeModal, 6000);
 
-        // window.onclick = function(event) {
-        //     if (event.target == modal) {
-        //       modal.style.display = "none";
-        //     }
-        // }
+        document.addEventListener('click', (e) =>{
+            if (e.target === modalBox) closeModal();
+        });
     };
 };
-
-// myForm.addEventListener('submit', validateForm);
