@@ -30,7 +30,7 @@ export const validateForm = e => {
     // Teléfono como campo obligatorio
     phone.value.trim().length === 0 && errorMessage.push('El teléfono es un campo obligatorio')
     // Mensaje como campo obligatorio
-    message.value.trim().length < 5 && errorMessage.push('Introduzca un breve mensaje para procesar su consulta con más agilidad');
+    message.value.trim().length < 5 && errorMessage.push('Introduzca un breve mensaje para procesar su consulta');
     // Checkbox obligatorio
     !termsCheckbox.checked && errorMessage.push('Debes aceptar la política de privacidad');
 

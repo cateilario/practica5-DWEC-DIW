@@ -26,7 +26,6 @@
 
 html{
     scroll-behavior: smooth;
-    /*scroll-snap-type: y mandatory; -> Cambia por secciones de la página*/
 }
 
 body{
@@ -42,18 +41,16 @@ p{
 }
 
 /*Creación reglas de estilo*/
-/* :root{
-    --h1-font-size: 4rem;
-    --span-font-size: 2rem;
-    --input-size: 20rem;
-    --h1-color: white;
-    --span-color: white;
-} */
+:root{
+    --h1-font-size: 2.2rem;
+    --primary-color: #ffffff;
+    --secondary-color: #2b2a2a;
+    --tertiary-color: #daa94e;
+}
 
 /*Header - Navbar*/
-
 .nav-bar{
-    background-color: #ffffff;
+    background-color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -116,14 +113,14 @@ p{
     align-items: center;
     gap: 1rem;
     height: 100%;
-    color:#ffffff;
+    color:var(--primary-color);
     width: 70%;
     margin: auto;
     text-align: center;
 }
 
 .hero-body h1{
-    font-size: 2.2rem;
+    font-size: var(--h1-font-size);
     font-weight: 600;
     letter-spacing: 1.5px;
 }
@@ -143,14 +140,14 @@ p{
     flex-direction: column;
     align-items: center;
     gap:1rem;
-    margin: 0  0 3rem 4rem;
+    margin-bottom: 3rem;
 }
 
 .services-title{
     text-transform: uppercase;
     font-weight: 1300;
-    font-size: 2.2rem;
-    color: #2b2a2a;
+    font-size: var(--h1-font-size);
+    color: var(--secondary-color);
 }
 
 .services header h2{
@@ -160,7 +157,7 @@ p{
 }
 
 .cards-grid{
-    width: 85%;
+    width: 90%;
     display:grid;
     margin: auto;
     grid-template-columns: repeat(4,1fr);
@@ -178,7 +175,6 @@ p{
     flex-direction: column;
     align-items: flex-start;
     padding-bottom: .5rem;
-    /* min-height: 45vh; */
 }
 
 .card .overlay{
@@ -191,7 +187,7 @@ p{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #daa94e;
+    background-color: var(--tertiary-color);
     opacity: 0;
     transition: all 0.3s linear;
     border-radius: 8px;
@@ -202,8 +198,8 @@ p{
 .btn{
     padding: 1rem 2rem;
     text-decoration: none;
-    color: #2b2a2a;
-    border: 2px solid #2b2a2a;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
     border-radius: 8px;
     letter-spacing: .8px;
 }
@@ -252,20 +248,21 @@ p{
 
 /*Contact section*/
 .hero-2{
-    clip-path: polygon(0 6%, 100% 8%, 100% 100%, 0 100%);
+    clip-path: polygon(0 6%, 100% 7%, 100% 100%, 0 100%);
     background: url(/assets/imgs/fondo2.jpg) center/cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 7.5rem 0 3rem 0;
+    margin-top: 1rem;
     gap: 2rem;
 }
 
 .contact-title{
     position:relative;
-    color: white;
-    font-size: 2.2rem;
+    color: var(--primary-color);
+    font-size: var(--h1-font-size);
     letter-spacing: 2px;
 }
 
@@ -281,20 +278,22 @@ p{
 fieldset{
     border: none;
     margin-top: 1rem;
+    padding:1rem;
 }
 
 fieldset legend{
-    color:#daa94e;
+    color:var(--tertiary-color);
     font-size: .9rem;
-    width: 85%;
+    width: 90%;
+    margin-left: 1rem;
 }
 
 form{
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: auto;
+    width: 100%;
     gap: 1.5rem;
 }
 
@@ -303,7 +302,7 @@ form input, textarea {
     width: 100%;
     border:0;
     background: transparent;
-    color:#ffffff;
+    color:var(--primary-color);
     resize: none;
     font-family: Raleway-Light;
     font-size: .9rem;
@@ -316,7 +315,7 @@ form textarea:focus{
 
 .input-container{
     width: 100%;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .input-container i{
@@ -324,7 +323,7 @@ form textarea:focus{
 }
 
 .icon{
-    color: white;
+    color: var(--primary-color);
     padding: .7rem;
 }
 
@@ -341,7 +340,7 @@ form textarea:focus{
 }
 
 .cb-lb{
-    color:#ffffff;
+    color:var(--primary-color);
     font-size: .75rem;
     font-family: Raleway-Light;
     text-wrap:nowrap;
@@ -350,7 +349,7 @@ form textarea:focus{
 
 .contact-btn{
     border: none;
-    background-color: #daa94e;
+    background-color: var(--tertiary-color);
     width: 40%;
     margin:auto;
     padding: .5rem 2rem;
@@ -359,15 +358,15 @@ form textarea:focus{
 }
 
 .contact-info{
-    color:#daa94e;
+    color:var(--tertiary-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap:1rem;
-    padding: 2rem;
+    padding: 2rem 3rem;
     font-size: .9rem;
-    border-left: 1px solid white;
+    border-left: 1px solid var(--primary-color);
 }
 
 .icon-contact{
@@ -382,14 +381,15 @@ footer{
     align-items: center;
     gap:2.5rem;
     padding:2rem 3rem 1rem 3rem;
-    background-color: #2b2a2a;
-    color:#ffffff;
+    background-color: var(--secondary-color);
+    color:var(--primary-color);
     font-size: .8rem;
 }
 
 .map{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap:1rem;
 }
 
 .map-info p:first-child{
@@ -404,7 +404,7 @@ footer{
     gap: 1rem;
 }
 
-/* @media screen and (max-width: 1024px) */
+/* Media queries */
 @media (width <= 1024px) {
     .open-menu,
     .close-menu {
@@ -417,7 +417,7 @@ footer{
     }
 
     .close-menu{
-        color: white;
+        color: var(--primary-color);
     }
 
     .nav{
@@ -454,7 +454,7 @@ footer{
     }
 
     .nav-list li a{
-        color: white;
+        color: var(--primary-color);
         position: relative;
     }
 
@@ -465,7 +465,7 @@ footer{
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: #ffffff;
+        background-color: var(--primary-color);
         transform: scale(0);
         transform-origin: bottom right;
         transition: transform .6s ease-out;
@@ -481,25 +481,29 @@ footer{
         height: 150px;
     }
 
+    .hero-1{
+        height: 90vh;
+    }
+
     .hero-body h1{
-    font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-body p{
-    font-size: .9rem;
+        font-size: .9rem;
     }
 
     .services header h1{
-        font-size: 1.9rem;
+        font-size: 1.8rem;
     }
     
     .services header h2{
-        font-size: 1.1rem;
+        font-size: .9rem;
     }
 
     .cards-grid{
         grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-        width: 70%;
+        width: 75%;
     }
 
     .card-body h2{
@@ -511,22 +515,48 @@ footer{
     }
 
     .contact-title{
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .contact-section{
         flex-direction: column;
-        width: 90%;
+        width: 85%;
         padding:1rem;
+    }
+    
+    fieldset legend{
+        font-size: .8rem;
+        width: 80%;
+        margin-left: .5rem;
+    }
+
+    form{
+        padding: 1rem;
+    }
+
+    .cb-lb{
+        font-size: .6rem;
+        margin-left: .5rem;
+    }
+
+    .input-container{
+        width: 95%;
     }
 
     .contact-info{
         border:none;
-        border-top: 1px solid white;
+        border-top: 1px solid var(--primary-color);
+        font-size: .8rem;
+    }
+
+    iframe{
+        width: 250px;
+        height: 150px;
     }
 
     footer{
         font-size: .7rem;
+        padding:2rem 2rem 1rem 2rem;
     }
     
     .map{
@@ -536,7 +566,4 @@ footer{
     .map-info p:first-child{
         font-size: .8rem;
     }
-
 }
-
-
