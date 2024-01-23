@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>PRACTICA 5</title>
+    <title>Diseño Web Responsive</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
@@ -12,7 +12,7 @@
 </head>
 <body>
     <header class="nav-bar">
-        <img src="/assets/logo.png" alt="Logo" class="logo">
+        <img src="/assets/imgs/logo.png" alt="Logo" class="logo">
         <button class="open-menu" id="open-nav"><i class="bi bi-list"></i></button>
         <nav class="nav" id="nav">
             <button id="close-nav" class="close-menu"><i class="bi bi-x"></i></button>
@@ -26,7 +26,7 @@
     <main>
         <section class="hero-container hero-1">
             <div class="hero-body">
-                <img src="/assets/paper_plane_flying-1.svg" alt="" role="img" width="200px" height="200px">
+                <img src="/assets/imgs/paper_plane_flying-1.svg" alt="Icono avión papel" class="svg-img" role="img" width="200px" height="200px">
                 <h1>Descubre la <span>"Città eterna"</span></h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos reprehenderit expedita adipisci quaerat 
                 amet vero obcaecati? Laudantium a, adipisci exercitationem minima itaque voluptas sed quam iure odit, eius 
@@ -40,7 +40,7 @@
             </header>
             <div class="cards-grid">
                 <article class="card">
-                    <img src="/assets/vaticano.jpg" alt="muestra" class="card-img">
+                    <img src="/assets/imgs/vaticano.jpg" alt="muestra" class="card-img">
                     <div class="card-body">
                         <h3>TOUR</h3>
                         <h2>Vaticano, Capilla Sixtina y San Pietro</h2>
@@ -53,7 +53,7 @@
                     </div>
                 </article>
                 <article class="card">
-                    <img src="/assets/colosseo.jpg" alt="muestra" class="card-img">
+                    <img src="/assets/imgs/colosseo.jpg" alt="muestra" class="card-img">
                     <div class="card-body">
                         <h3>TOUR</h3>
                         <h2>Colosseo, Foro Romano y Palatino</h2>
@@ -66,7 +66,7 @@
                     </div>
                 </article>
                 <article class="card">
-                    <img src="/assets/pantheon.jpg" alt="muestra" class="card-img">
+                    <img src="/assets/imgs/pantheon.jpg" alt="muestra" class="card-img">
                     <div class="card-body">
                         <h3>TOUR</h3>
                         <h2>Centro histórico y sus calles</h2>
@@ -79,7 +79,7 @@
                     </div>
                 </article>
                 <article class="card">
-                    <img src="/assets/trevi.jpg" alt="muestra" class="card-img">
+                    <img src="/assets/imgs/trevi.jpg" alt="muestra" class="card-img">
                     <div class="card-body">
                         <h3>TOUR</h3>
                         <h2>Secretos subterráneos: Trevi y Piazza Navona</h2>
@@ -92,7 +92,7 @@
                     </div>
                 </article>
                 <article class="card">
-                    <img src="/assets/santangelo.jpg" alt="muestra" class="card-img">
+                    <img src="/assets/imgs/santangelo.jpg" alt="muestra" class="card-img">
                     <div class="card-body">
                         <h3>TOUR NOCTURNO</h3>
                         <h2>Fantasmas y leyendas de Roma</h2>
@@ -105,7 +105,7 @@
                     </div>
                 </article>
                 <article class="card">
-                    <img src="/assets/aranci.jpg" alt="muestra" class="card-img">
+                    <img src="/assets/imgs/aranci.jpg" alt="muestra" class="card-img">
                     <div class="card-body">
                         <h3>TOUR</h3>
                         <h2>Giardino degli aranci y miradores secretos</h2>
@@ -118,7 +118,7 @@
                     </div>
                 </article>
                 <article class="card">
-                    <img src="/assets/trastevere.jpeg" alt="muestra" class="card-img">
+                    <img src="/assets/imgs/trastevere.jpeg" alt="muestra" class="card-img">
                     <div class="card-body">
                         <h3>EXPERIENCIA</h3>
                         <h2>Trastevere y aperitivo romano</h2>
@@ -131,7 +131,7 @@
                     </div>
                 </article>
                 <article class="card">
-                    <img src="/assets/carbonara.jpg" alt="muestra" class="card-img">
+                    <img src="/assets/imgs/carbonara.jpg" alt="muestra" class="card-img">
                     <div class="card-body">
                         <h3>WORKSHOP</h3>
                         <h2>Pasta casera con Aperol Spritz</h2>
@@ -150,7 +150,7 @@
             <div class="contact-section">
                 <fieldset>
                     <legend>Rellena el formulario con tus datos y tu solicitud, y nos pondremos en contacto contigo...</legend>
-                    <form action="/templates/submitForm.html" method="get" id="contact-form">
+                    <form action="/templates/submitForm.html" method="get" id="contact-form" autocomplete="off">
                         <label for="name" class="input-container">
                             <i class="bi bi-person-fill icon"></i>
                             <input type="text" id="name" placeholder="Nombre" class="input-field">

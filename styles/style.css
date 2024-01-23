@@ -114,11 +114,11 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     height: 100%;
     color:#ffffff;
     width: 70%;
-    margin:auto;
+    margin: auto;
     text-align: center;
 }
 
@@ -275,6 +275,7 @@ p{
     background-color: #272727d2;
     justify-content: center;
     padding: 2rem;
+    width: 80%;
 }
 
 fieldset{
@@ -285,7 +286,7 @@ fieldset{
 fieldset legend{
     color:#daa94e;
     font-size: .9rem;
-    width: 70%;
+    width: 85%;
 }
 
 form{
@@ -350,7 +351,7 @@ form textarea:focus{
 .contact-btn{
     border: none;
     background-color: #daa94e;
-    width: 30%;
+    width: 40%;
     margin:auto;
     padding: .5rem 2rem;
     font-size: 1rem;
@@ -403,7 +404,8 @@ footer{
     gap: 1rem;
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) */
+@media (width <= 1024px) {
     .open-menu,
     .close-menu {
       display: block;
@@ -474,6 +476,19 @@ footer{
         transform-origin: bottom left;
     }
 
+    .svg-img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-body h1{
+    font-size: 2rem;
+    }
+
+    .hero-body p{
+    font-size: .9rem;
+    }
+
     .services header h1{
         font-size: 1.9rem;
     }
@@ -495,15 +510,31 @@ footer{
         font-size: .8rem;
     }
 
+    .contact-title{
+        font-size: 2rem;
+    }
+
     .contact-section{
         flex-direction: column;
         width: 90%;
+        padding:1rem;
     }
 
     .contact-info{
         border:none;
         border-top: 1px solid white;
-        
+    }
+
+    footer{
+        font-size: .7rem;
+    }
+    
+    .map{
+        grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    }
+    
+    .map-info p:first-child{
+        font-size: .8rem;
     }
 
 }

@@ -45,7 +45,7 @@
   position: absolute;
   top:0;
   right:0;
-  background-color: #e56b65;
+  background-color: #eb7771;
   padding: .4rem 1.2rem;
   border: none;
   cursor: pointer;  
@@ -54,4 +54,23 @@
 
 .modal-icon{
     font-size: 1.5rem;
+}
+
+@media (width <= 1024px){
+    .modal-content {
+        margin: 1.5rem auto;
+        width: 70%;
+    }
+
+    .modal-content ul li{
+        font-size: .9rem;
+    }
+    
+    .modal-content ul li::before{
+        font-size: 1.3rem;
+    }
+
+    .close {
+        padding: .1rem .8rem;
+    }
 }

@@ -1,92 +1,98 @@
 @font-face {
-    font-family: 'Raleway-Light';
-    src: url(/assets/fonts/Raleway-Light.ttf) format('truetype');
+  font-family: 'Raleway-Light';
+  src: url(/assets/fonts/Raleway-Light.ttf) format('truetype');
 }
 
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
   
-  body {
-    margin: 0;
-    color: #333;
-    overflow-x: hidden;
-    font-family: Raleway-Light;
-  }
+body {
+  margin: 0;
+  color: #333;
+  overflow-x: hidden;
+  font-family: Raleway-Light;
+}
   
-  .header {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    color: #fff;
-  }
+.header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
   
-  .content {
-    max-width: 40rem;
-    margin: auto;
-    text-align: center;
-  }
+.header-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header-video video {
+  min-width: 100%;
+  min-height: 100%;
+}
   
-  .header-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+.header-overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #1c1c1c;
+  z-index: 1;
+  opacity: .6;
+}
+  
+.header-content {
+  z-index: 2;
+  background-color: #1c1c1caf;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+  
+.header-content h1 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+  
+.header-content p {
+  font-size: 1.2rem;
+}
+  
+.index-btn {
+  background: #b28a40;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+  
+@media (width <= 1024px) {
+  .header-content{
+    max-width: 80%;
   }
 
-  video{
-    width: 100%;
-  }
-  
-  .header-video video {
-    min-width: 100%;
-    min-height: 100%;
-  }
-  
-  .header-overlay {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #1c1c1c;
-    z-index: 1;
-    opacity: .6;
-  }
-  
-  .header-content {
-    z-index: 2;
-    background-color: #1c1c1caf;
-    padding: 2rem 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
   .header-content h1 {
-    font-size: 1.7rem;
-    font-weight: 800;
-    text-transform: uppercase;
+    font-size: 1.5rem;
   }
-  
+    
   .header-content p {
-    font-size: 1.2rem;
-  }
-  
-  .btn {
-    background: #b28a40;
-    color: #fff;
     font-size: 1rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    padding: 1rem 2rem;
-    text-decoration: none;
   }
-  
-  @media (max-width: 960px) {
-    .content {
-      padding: 0 3rem 0 3rem;
-    }
+
+  .btn{
+    padding: 0.8rem 1.8rem;
+    font-size: .8rem;
   }
+}
