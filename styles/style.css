@@ -42,7 +42,7 @@ p{
 
 /*Creación reglas de estilo*/
 :root{
-    --h1-font-size: 2.2rem;
+    --h1-font-size: 2.5rem;
     --primary-color: #ffffff;
     --secondary-color: #2b2a2a;
     --tertiary-color: #daa94e;
@@ -58,12 +58,12 @@ p{
 }
 
 .logo{
-    max-width: 11rem;
+    max-width: 12rem;
 }
 
 .nav-list{
     list-style: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     display:flex;
  }
 
@@ -408,7 +408,7 @@ footer{
 }
 
 /* Media queries */
-@media (width <= 1024px) {
+@media (width < 1024px) {
     .open-menu,
     .close-menu {
       display: block;
@@ -436,7 +436,7 @@ footer{
         right: 0;
         bottom:0;
         background-color: #272727;
-        width: 60%;
+        width: 70%;
         box-shadow: 0 0 0 100vmax #000000a0;
         z-index: 1;
     }
@@ -489,7 +489,7 @@ footer{
     }
 
     .hero-body h1{
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 
     .hero-body p{
@@ -497,7 +497,7 @@ footer{
     }
 
     .services header h1{
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
     
     .services header h2{
@@ -518,7 +518,7 @@ footer{
     }
 
     .contact-title{
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 
     .contact-section{
