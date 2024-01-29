@@ -58,7 +58,7 @@ p{
 }
 
 .logo{
-    max-width: 12rem;
+    width: 12rem;
 }
 
 .nav-list{
@@ -91,7 +91,7 @@ p{
 }
 
 .hero-1{
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0 90%);
     background: url(/assets/imgs/fondo.jpg) center/cover;
     height: 100vh;
 }
@@ -142,6 +142,7 @@ p{
     justify-content: center;
     gap:1rem;
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 .services-title{
@@ -155,7 +156,6 @@ p{
     font-size: 1.2rem;
     font-family: Raleway-Light;
     color: #747272;
-    text-align: center;
 }
 
 .cards-grid{
@@ -480,8 +480,8 @@ footer{
     }
 
     .svg-img{
-        width: 100px;
-        height: 100px;
+        width: 130px;
+        height: 130px;
     }
 
     .hero-1{
